@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { name: 'About', href: 'about' },
@@ -13,17 +14,27 @@ const Navigation = () => {
     { name: 'Gallery', href: 'gallery' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full bg-[#DDDDDD] text-[#00454A] shadow-lg z-50">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled ? 'bg-[#00454A] shadow-lg' : 'bg-[rgba(178,212,220,0.01)]'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 ">
           {/* Brand Title */}
           <div className="flex-shrink-0">
-            <Link 
-              to="home" 
-              smooth={true} 
-              duration={500} 
-              className="text-xl font-bold cursor-pointer"
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="text-4xl font-bold cursor-pointer text-[#668f92]"
             >
               Sajeeaa Siddeek
             </Link>
@@ -39,7 +50,7 @@ const Navigation = () => {
                   smooth={true}
                   duration={500}
                   offset={-80} // Offset to account for fixed header
-                  className="nav-link relative px-3 py-2 text-sm font-medium hover:text-[#C890A7] transition-colors duration-200 cursor-pointer"
+                  className="nav-link relative px-3 py-2 text-[#668f92] font-bold hover:text-[#ffffff] transition-colors duration-200 cursor-pointer hover:text-xl text-xl"
                 >
                   {link.name}
                   <span className="nav-underline"></span>
@@ -52,7 +63,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-[#C890A7] hover:text-white focus:outline-none transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-[#422631] hover:text-white focus:outline-none transition-colors duration-200 border-b-4 border-transparent hover:border-[#C890A7] transition-all duration-500 text:xl"
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
@@ -108,7 +119,7 @@ const Navigation = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:bg-[#C890A7] hover:text-white transition-colors duration-200 cursor-pointer"
+                  className="block px-3 py-2 rounded-md text-base font-bold hover:bg-[#14030a] hover:text-white transition-colors duration-200 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -132,7 +143,7 @@ const Navigation = () => {
           left: 0;
           width: 0;
           height: 2px;
-          background-color: #C890A7;
+          background-color:#230d16;
           transition: width 0.3s ease;
         }
         
@@ -145,3 +156,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

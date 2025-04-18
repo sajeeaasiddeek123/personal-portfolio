@@ -18,17 +18,16 @@ const Hero = () => {
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         {/* Name */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#00454A] mb-4">
-          Sajeeaa Siddeek
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#668f92] mb-4">
+        Creating change, one healthy step at a time.
         </h1>
-
-        {/* Description */}
-        <p className="text-lg sm:text-xl md:text-2xl text-[#DDDDDD] mb-8 max-w-2xl">
-          Health Promotion Undergraduate | Field Experience | First Aid Volunteer
+        <p className="text-md sm:text-lg md:text-xl text-[#CCCCCC] mb-4 mt-4">
+        Specializing in public health, behavior change, and community wellness. I am a Health Promotion undergraduate with a strong foundation in public health, behavior change communication, and community engagement.
         </p>
 
+       
         {/* Icons */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10">
+        <div className="flex flex-wrap justify-center gap-6 mb-10 mt-4">
           <div className="flex flex-col items-center">
             <FaHeartbeat className="text-3xl sm:text-4xl text-[#00454A] mb-2" />
             <span className="text-sm text-[#DDDDDD]">Public Health</span>

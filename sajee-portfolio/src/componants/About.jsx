@@ -30,7 +30,7 @@ const About = () => {
 
           {/* Right Side - Details Section */}
           <div className="w-full md:w-1/2 flex flex-col items-start">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#00454A] mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#14030a] mb-4">
               Portfolio of Sajeeaa
             </h2>
             
