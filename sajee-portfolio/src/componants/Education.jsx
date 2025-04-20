@@ -57,7 +57,7 @@ const Education = () => {
         {/* Education Timeline */}
         <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Left Column - Timeline Line */}
-          <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[#00454A] to-[#DDDDDD] rounded-full"></div>
+          <div className="hidden md:block w-1 h-full bg-gradient-to-b from-[#00454A] to-[#828181] rounded-full"></div>
 
           {/* Right Column - Education Entries */}
           <div className="w-full md:w-3/4 space-y-12">
@@ -78,13 +78,13 @@ const Education = () => {
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold text-[#00454A] mb-1">{education.degree}</h3>
                     
-                    <div className="flex items-center text-[#DDDDDD] mb-2">
+                    <div className="flex items-center text-[#828181] mb-2">
                       <FaUniversity className="mr-2 text-[#00454A]" />
                       <span>{education.institution}</span>
                     </div>
                     
-                    <div className="flex items-center text-[#DDDDDD] mb-3">
-                      <FaCalendarAlt className="mr-2 text-[#00454A]" />
+                    <div className="flex items-center text-[#828181] mb-3">
+                      <FaCalendarAlt className="mr-2 text-[#00454b]" />
                       <span>{education.duration}</span>
                     </div>
                     

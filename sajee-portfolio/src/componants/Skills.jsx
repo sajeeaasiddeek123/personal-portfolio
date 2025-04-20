@@ -109,7 +109,7 @@ const Skills = () => {
                       <div className="w-8 h-8 rounded-full bg-[#00454A]/10 flex items-center justify-center">
                         {skill.icon}
                       </div>
-                      <span className="text-[#DDDDDD] font-medium">{skill.name}</span>
+                      <span className="text-[#00454A] font-medium">{skill.name}</span>
                     </li>
                   ))}
                 </ul>

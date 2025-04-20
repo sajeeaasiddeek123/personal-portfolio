@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -108,7 +108,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold">Follow Me</h3>
             <div className="flex space-x-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/share/1BKmYyJXLg/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
@@ -116,17 +116,9 @@ const Footer = () => {
               >
                 <FaFacebookF />
               </a>
+          
               <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </a>
-              <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/sajeeaa_siddeek?igsh=M3NtemhnMzNpeXZt" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
@@ -135,7 +127,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/sajeeaa-siddeek-aa62b4211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
@@ -143,15 +135,7 @@ const Footer = () => {
               >
                 <FaLinkedinIn />
               </a>
-              <a 
-                href="https://youtube.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
-                aria-label="YouTube"
-              >
-                <FaYoutube />
-              </a>
+             
             </div>
           </div>
         </div>

@@ -77,7 +77,7 @@ const Experience = () => {
                   <h3 className="text-[#00454A] font-semibold text-lg md:text-xl mb-1">
                     {experience.title}
                   </h3>
-                  <p className="text-[#DDDDDD] text-sm md:text-base mb-2">
+                  <p className="text-[#828181] text-sm md:text-base mb-2">
                     {experience.organization}
                   </p>
                 </div>
@@ -85,25 +85,25 @@ const Experience = () => {
 
               {/* Location and Duration */}
               <div className="flex flex-wrap gap-4 mb-4">
-                <div className="flex items-center text-[#DDDDDD] text-sm">
+                <div className="flex items-center text-[#828181] text-sm">
                   <FaMapMarkerAlt className="mr-2 text-[#00454A] hover:text-[#00454A] transform hover:scale-110 transition-all duration-300" />
                   <span>{experience.location}</span>
                 </div>
-                <div className="flex items-center text-[#DDDDDD] text-sm">
+                <div className="flex items-center text-[#828181] text-sm">
                   <FaClock className="mr-2 text-[#00454A] hover:text-[#00454A] transform hover:scale-110 transition-all duration-300" />
                   <span>{experience.duration}</span>
                 </div>
               </div>
 
               {/* Summary */}
-              <p className="text-[#DDDDDD] text-sm md:text-base leading-relaxed mb-4">
+              <p className="text-[#383030] text-sm md:text-base leading-relaxed mb-4">
                 {experience.summary}
               </p>
 
               {/* Responsibilities */}
               <div>
                 <h4 className="text-[#00454A] font-medium mb-2">Key Responsibilities:</h4>
-                <ul className="list-disc list-inside text-[#DDDDDD] text-sm md:text-base space-y-1">
+                <ul className="list-disc list-inside text-[#828181] text-sm md:text-base space-y-1">
                   {experience.responsibilities.map((responsibility, idx) => (
                     <li key={idx}>{responsibility}</li>
                   ))}

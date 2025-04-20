@@ -3,6 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaShare, FaDownload, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import img1 from '../assets/1.jpeg';
+import img2 from '../assets/2.jpeg';
+import img3 from '../assets/3.jpeg';
+import img4 from '../assets/4.jpeg';
+import img5 from '../assets/5.jpeg';
+import img6 from '../assets/6.jpeg';
+import img7 from '../assets/7.jpeg';
+import img8 from '../assets/8.jpeg';
+
 
 const Gallery = () => {
   // Initialize AOS on component mount
@@ -24,49 +33,49 @@ const Gallery = () => {
     {
       id: 1,
       title: "Health Promotion Workshop",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img1,
       description: "Conducting a health promotion workshop in a rural community."
     },
     {
       id: 2,
       title: "First Aid Training",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img2,
       description: "Providing first aid training to community members."
     },
     {
       id: 3,
       title: "Women's Health Program",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+      image: img3,
       description: "Leading a women's health awareness program."
     },
     {
       id: 4,
       title: "Community Health Assessment",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      image:img4,
       description: "Conducting a community health assessment in rural areas."
     },
     {
       id: 5,
       title: "Child Care Initiative",
-      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img5,
       description: "Working with children in a health education program."
     },
     {
       id: 6,
       title: "Emergency Response Training",
-      image: "https://images.unsplash.com/photo-1584515979956-d9f6c5f7d053?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img6,
       description: "Training community members in emergency response."
     },
     {
       id: 7,
       title: "Health Education Materials",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img7,
       description: "Developing health education materials for communities."
     },
     {
       id: 8,
       title: "Public Health Campaign",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: img8,
       description: "Leading a public health awareness campaign."
     }
   ];
@@ -109,11 +118,11 @@ const Gallery = () => {
         </h2>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {galleryData.map((item, index) => (
             <motion.div
               key={item.id}
-              className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+              className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -129,7 +138,7 @@ const Gallery = () => {
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 blur-sm"
                   loading="lazy"
                 />
                 
